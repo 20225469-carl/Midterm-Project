@@ -1,13 +1,12 @@
-// src/app/pokemart/pokemart.component.ts
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PokemonMartService, MartItem } from '../pokemon-mart.service';
-import { ItemCardComponent } from './item-card.component';
+import { ItemCard } from './item-card/item-card';
+import { PokemonMartService, MartItem } from './pokemon-mart.service';
 
 @Component({
   selector: 'app-pokemart',
   standalone: true,
-  imports: [CommonModule, ItemCardComponent],
+  imports: [CommonModule, ItemCard],
   template: `
     <div class="mart-layout">
       <div class="catalog-section">
@@ -95,10 +94,9 @@ import { ItemCardComponent } from './item-card.component';
     .clear-all-btn:hover { background: #f9fafb; color: #ef4444; }
   `]
 })
-export class PokemartComponent {
+export class PokemonMart {
   service = inject(PokemonMartService);
 
-  // Handles data payload packets received from child custom component streams
   handleAddItem(item: MartItem) {
     this.service.addToCart(item);
   }
