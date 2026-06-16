@@ -39,8 +39,18 @@ export class PokemonMartService {
 
   private shoppingCart = signal<CartItem[]>([]);
 
+  private initialPokemonList = signal([
+    { name: 'Charizard', region: 'Kanto', type: 'Fire / Flying', heldItem: 'Charizardite Y', emoji: '🔥', description: 'It flies around the sky in search of powerful opponents.' },
+    { name: 'Gengar', region: 'Kanto', type: 'Ghost / Poison', heldItem: 'Life Orb', emoji: '👻', description: 'Hides in shadows. It is said that if Gengar is hiding, it cools the area.' },
+    { name: 'Tyranitar', region: 'Johto', type: 'Rock / Dark', heldItem: 'Assault Vest', emoji: '🦖', description: 'Its body cannot be harmed by any sort of attack, so it is very eager to fight.' },
+    { name: 'Ampharos', region: 'Johto', type: 'Electric', heldItem: 'Magnet', emoji: '⚡', description: 'The light from its tail can be seen from space. It used to be used as a beacon.' },
+    { name: 'Sceptile', region: 'Hoenn', type: 'Grass', heldItem: 'Miracle Seed', emoji: '🦎', description: 'The leaves growing on its arms can slice down thick trees with swift agility.' },
+    { name: 'Metagross', region: 'Hoenn', type: 'Steel / Psychic', heldItem: 'Choice Band', emoji: '🤖', description: 'With four brains, it has the intelligence of a supercomputer to calculate combat.' }
+  ]);
+
   martItems = this.martCatalog.asReadonly();
   cart = this.shoppingCart.asReadonly();
+  pokemonList = this.initialPokemonList.asReadonly();
 
   cartTotal = computed(() => {
     return this.shoppingCart().reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
