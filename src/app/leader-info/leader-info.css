@@ -1,0 +1,85 @@
+.region-container-box {
+    background-color: #f4f8ff;
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1100px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .template-header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #3b82f6;
+    padding-bottom: 15px;
+  }
+  
+  .region-title-main {
+    font-size: 2.2rem;
+    margin: 0;
+    color: #111827;
+  }
+  
+  .selector-wrapper {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .region-dropdown {
+    padding: 8px 12px;
+    border: 2px solid #3b82f6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .leader-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .leader-card-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .leader-name-header {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2563eb;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 10px;
+  }
+  
+  .leader-details-body p {
+    margin: 6px 0;
+    font-size: 1.05rem;
+  }
+  
+  .roster-list {
+    padding-left: 20px;
+  }
+  
+  .action-btn-toggle {
+    background-color: #1f2937;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }

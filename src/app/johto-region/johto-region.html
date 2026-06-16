@@ -1,0 +1,8 @@
+<section class="region-container johto-theme">
+  <h2>🔵 Johto League Leaders</h2>
+  <div class="leader-grid">
+    @for (leader of johtoLeaders(); track leader.name) {
+      <app-leader-info [leader]="leader" />
+    }
+  </div>
+</section>

@@ -1,0 +1,4 @@
+.region-container { padding: 2rem; border-radius: 12px; }
+.johto-theme { background-color: #f5f9ff; border: 2px solid #4d94ff; }
+h2 { text-align: center; color: #1a1a1a; font-size: 1.8rem; margin-top: 0; }
+.leader-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }

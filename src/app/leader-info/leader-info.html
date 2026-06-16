@@ -1,0 +1,26 @@
+<div class="leader-card-item">
+  
+  <h2 class="leader-name-header" [style.color]="leader.typeColor">
+    {{ leader.name }}
+  </h2>
+  
+  <div class="leader-details-body">
+    <p><strong>Age:</strong> {{ leader.age }}</p>
+    <p><strong>Location:</strong> {{ leader.location }}</p>
+    <p><strong>Gym Badge:</strong> {{ leader.badge }}</p>
+    
+    <div class="roster-section-block">
+      <h3>Gym Roster:</h3>
+      <ul class="roster-list">
+        @for (pokemon of leader.team; track $index) {
+          <li>{{ pokemon.name }} (Lv. {{ pokemon.level }})</li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <button class="action-btn-toggle" (click)="alertIntro(leader.intro)">
+    Show Monologue/Description/Motto
+  </button>
+  
+</div>

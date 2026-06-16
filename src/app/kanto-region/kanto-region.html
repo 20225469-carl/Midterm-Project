@@ -1,0 +1,8 @@
+<section class="region-container kanto-theme">
+  <h2>🔴 Kanto League Leaders</h2>
+  <div class="leader-grid">
+    @for (leader of kantoLeaders(); track leader.name) {
+      <app-leader-info [leader]="leader" />
+    }
+  </div>
+</section>
