@@ -1,11 +1,21 @@
-<nav class="app-navbar">
-  <div class="brand">🎈 Sinnoh-Johto-Hoenn Logistics Hub</div>
-  <div class="links">
-    <a routerLink="showcase" routerLinkActive="active">🌟 Team Showcase</a>
-    <a routerLink="mart" routerLinkActive="active">🛒 Silph Co. PokéMart</a>
+<div class="header-container">
+  <span class="brand-title" routerLink="/home" style="cursor: pointer;">
+    🔍 Sinnoh-Johto-Hoenn Logistics Hub
+  </span>
+  
+  <div class="header-actions">
+    <button class="nav-btn" routerLink="/home" routerLinkActive="active-tab">
+      🏠 Home
+    </button>
+    <button class="nav-btn" routerLink="/showcase" routerLinkActive="active-tab">
+      🌟 Team Showcase
+    </button>
+    <button class="nav-btn" routerLink="/mart" routerLinkActive="active-tab">
+      🛒 Silph Co. PokéMart
+    </button>
   </div>
-</nav>
+</div>
 
-<main class="page-viewport">
+<div class="main-content">
   <router-outlet></router-outlet>
-</main>
+</div>
