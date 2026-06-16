@@ -21,8 +21,20 @@ import { MartItem } from '../pokemon-mart.service';
     </div>
   `,
   styles: [`
-    .item-card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s, box-shadow 0.2s; }
-    .item-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .item-card { 
+      background: white; 
+      border: 1px solid #e5e7eb; 
+      border-radius: 8px; 
+      padding: 15px; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: space-between; 
+      transition: transform 0.2s, box-shadow 0.2s; 
+    }
+    .item-card:hover { 
+      transform: translateY(-3px); 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    }
     
     /* Dynamic styling context depending on item category flags */
     .balls { border-left: 4px solid #ef4444; }
@@ -36,13 +48,22 @@ import { MartItem } from '../pokemon-mart.service';
     .price-lbl { margin: 0 0 6px 0; font-weight: bold; color: #cc0000; font-size: 0.95rem; }
     .desc-lbl { margin: 0; font-size: 0.85rem; color: #6b7280; line-height: 1.3; }
     
-    .add-btn { background: #1a1a1a; color: white; border: none; padding: 10px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 15px; transition: background 0.2s; }
+    .add-btn { 
+      background: #1a1a1a; 
+      color: white; 
+      border: none; 
+      padding: 10px 12px; 
+      border-radius: 6px; 
+      font-weight: bold; 
+      cursor: pointer; 
+      margin-top: 15px; 
+      transition: background 0.2s; 
+    }
     .add-btn:hover { background: #cc0000; }
   `]
 })
 export class ItemCard {
   @Input({ required: true }) item!: MartItem;
-  
   @Output() addToOrder = new EventEmitter<MartItem>();
 
   onAddClick() {
